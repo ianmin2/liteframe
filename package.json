@@ -4,7 +4,7 @@
     "description": "A lighter version of bixbyte-frame with the bare essentials.",
     "main": "frame.js",
     "scripts": {
-        "test": "node frame.js"
+        "test": "node entry.js"
     },
     "preferGlobal": true,
     "engineStrict": true,
