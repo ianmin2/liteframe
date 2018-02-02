@@ -1,0 +1,1 @@
+exports.fRead  = exports.f_read = fpath => new Promise( resolve => resolve(fs.readFileSync(`${fpath}`,'utf8')) );
