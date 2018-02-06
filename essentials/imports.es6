@@ -43,7 +43,7 @@
     //** DATABASE MODULES
 
     //@ Sequielize for simplified ['mysql','postgresql','mssql','sqlite'] connection
-    exports.sequelize           = require("sequelize");
+    exports.sequelize    = exports.Sequelize       = require("sequelize");
 
 
     //** SERVER HANDLING MODULES
