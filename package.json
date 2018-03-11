@@ -1,7 +1,7 @@
 {
     "name": "lightframe",
-    "version": "1.0.1",
-    "description": "A powerful yet dead simple  framework for node.js.",
+    "version": "1.2.0",
+    "description": "A powerful yet dead simple framework for node.js.",
     "main": "frame.js",
     "scripts": {
         "test": "node entry.js"
