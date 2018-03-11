@@ -1,7 +1,7 @@
 {
-    "name": "bixbyte-frame-lite",
+    "name": "lightframe",
     "version": "1.0.1",
-    "description": "A lighter version of bixbyte-frame with the bare essentials.",
+    "description": "A powerful yet dead simple  framework for node.js.",
     "main": "frame.js",
     "scripts": {
         "test": "node entry.js"
@@ -9,7 +9,7 @@
     "preferGlobal": true,
     "engineStrict": true,
     "engines": {
-        "node": ">=6.0.0"
+        "node": ">=8.0.0"
     },
     "dependencies": {
         "adm-zip": "^0.4.7",
@@ -29,7 +29,7 @@
         "passport-jwt": "^2.2.1",
         "request": "^2.81.0",
         "shelljs": "^0.7.4",
-        "socket.io": "^1.4.8",
+        "socket.io": "^2.0.4",
         "superagent": "^2.2.0",
         "sequelize": "^4.32.3",
         "tar.gz": "^1.0.5",

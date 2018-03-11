@@ -1,4 +1,4 @@
-[![##Bixbyte-Frame](http://cards.ueab.ac.ke/bixbyte-frame.png)](https://www.npmjs.com/package/bixbyte-frame-lite)
+[![##LightFrame](http://cards.ueab.ac.ke/bixbyte-frame.png)](https://www.npmjs.com/package/lightframe)
 
 A flexible and comprehensive backend application framework for [node.js](http://nodejs.org).
 
@@ -7,18 +7,18 @@ A flexible and comprehensive backend application framework for [node.js](http://
 
 ----
 ### **To install**
-> npm install -g bixbyte-frame-lite
+> npm install -g lightframe
 
 ----
 ### **Documentation** 
     In progress at 
 [projects.bixbyte.io/frame](http://projects.bixbyte.io)
 
-[npm-image]: https://img.shields.io/npm/v/bixbyte-frame-lite.svg
-[npm-url]: https://npmjs.org/package/bixbyte-frame-lite
-[downloads-image]: https://img.shields.io/npm/dm/bixbyte-frame-lite.svg
-[downloads-url]: https://npmjs.org/package/bixbyte-frame-lite
-[linux-image]: https://img.shields.io/travis/ianmin2/bixbyte-frame-lite/master.svg?label=linux
-[windows-image]: https://img.shields.io/appveyor/ci/dougwilson/bixbyte-frame-lite/master.svg?label=windows
+[npm-image]: https://img.shields.io/npm/v/lightframe.svg
+[npm-url]: https://npmjs.org/package/lightframe
+[downloads-image]: https://img.shields.io/npm/dm/lightframe.svg
+[downloads-url]: https://npmjs.org/package/lightframe
+[linux-image]: https://img.shields.io/travis/ianmin2/lightframe/master.svg?label=linux
+[windows-image]: https://img.shields.io/appveyor/ci/dougwilson/lightframe/master.svg?label=windows
 
-[test-image]: https://img.shields.io/coveralls/ianmin2/bixbyte-frame-lite/master.svg
+[test-image]: https://img.shields.io/coveralls/ianmin2/lightframe/master.svg

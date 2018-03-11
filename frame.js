@@ -1,5 +1,5 @@
 let v = JSON.parse(require('fs').readFileSync(`${__dirname}/package.json`)).version;
-let d = `\n\t\t@bixbyte-frame-lite\n\t\t___________________\n\n\t\t  Version  ${v}\n\t\t___________________`;
+let d = `\n\t\t     @lightframe\n\t\t___________________\n\n\t\t  Version  ${v}\n\t\t___________________`;
 console.log(d);
 
 
