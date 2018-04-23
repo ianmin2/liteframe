@@ -1,6 +1,6 @@
 {
     "name": "lightframe",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A powerful yet dead simple  framework for node.js.",
     "main": "frame.js",
     "scripts": {
@@ -37,7 +37,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@bitbucket.org/thebixbyte/frame-lite.git"
+        "url": "git+ssh://git@github.com:ianmin2/lightframer.git"
     },
     "keywords": [
         "framify",
