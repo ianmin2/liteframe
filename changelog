@@ -132,3 +132,6 @@ v.1.0.0
 ==>  BRANCHED TO LITE 
 
 v.1.0.0 
+
+v.1.0.3
+			=> Added querystring and request as dependencies
