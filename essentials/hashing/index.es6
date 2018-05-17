@@ -10,7 +10,7 @@ exports.crypt = {
 	,sha1 : 				(string) => crypto.createHash('sha1').update( string ).digest('hex')
 
 	//SHA256 ENCRTPT A STRING
-	,sha256 : 				(string) => crypto.createhash('sha256').update( string ).digest('hex')
+	,sha256 : 				(string) => crypto.createHash('sha256').update( string ).digest('hex')
 
 	//BASE64 ENCODE A STRING
 	,base64_encode : (			string) => new Buffer(string).toString('base64')

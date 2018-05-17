@@ -24,6 +24,8 @@
     exports.targz               = require("tar.gz"); 
     exports.compression         = require("compression");
     exports.request             = require("request");
+    exports.qs                  = require("querystring");
+    exports.request_promise     = require("request-promise");
 
     // exports.xml2json            = require("simple-xml2json");
 
