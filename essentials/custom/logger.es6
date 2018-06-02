@@ -10,17 +10,11 @@ const Log = function( log_path, dev ){
 	
 	//THE SYSTEM EVENT LOGGER 
 	this.log = ( logMessage , term ) => {
-	    
-		logMessage = (typeof(logMessage)=="object")?JSON.stringify(logMessage):logMessage;
-					
-	    let d = new Date();
-	
-		ls.write(`${d.toISOString()}\t${logMessage} @!##\n\n`);
+	  	
+		ls.write(`${new Date().toISOString()}\t${(typeof(logMessage)=="object")?JSON.stringify(logMessage):logMessage} @!##\n\n`);
 		// ls.write(`${d}\t${logMessage.replace(/\[32m/ig,"").replace(/\[31m/ig,"").replace(/\[39m/ig,'').replace(/\[90m/ig, "").replace(/\[33m/ig, "").replace(/\[34m/ig, "")} @!##\n\n`);
 		// ls.write(`${d}\t${logMessage.replace(/\.success/ig, "").replace(/\.info/ig, "").replace(/\.yell/ig, "").replace(/\.err/ig, "").replace(/\.gray/ig, "")} @!##\n\n`);
-	   
-		console.log(`\n${d}\t${logMessage}\n` );
-	    
+	  	    
 		
 	};
 
