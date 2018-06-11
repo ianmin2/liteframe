@@ -3,7 +3,7 @@
 **/
 
 //@ Instantiate a basic express application
-let app      	    = express();
+let app   = _APP	= express();
 app.vars            = app.vars || {}; 
 
 //@ Define the default port
@@ -46,4 +46,4 @@ app.use("/framify/resources", express.static(__dirname + "/res"));
     EO - BASIC SERVER CONFIGURATION
 **/
 
-module.exports = { app };
+module.exports = { app, _APP };

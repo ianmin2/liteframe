@@ -18,13 +18,13 @@
     //@ Require some useful custom methods
     Object.assign(global,require(path.join(__dirname,"custom/index.es6")));
 
-    global.log   = logger(  path.join( global.home, ".bixbyte/logs/main.log") );
+    global.log = global._LOG   = logger(  path.join( global.home, ".bixbyte/logs/main.log") );
 
-    global.clog = global.c_log = (a)=>console.log(a);
+    global.clog = global.c_log = global._C_LOG = (a)=>console.log(a);
     
-    global.jlog = global.j_log = (a)=>console.log(JSON.stringify(a,null,2));
+    global.jlog = global.j_log = global._J_LOG = (a)=>console.log(JSON.stringify(a,null,2));
    
-    global.ilog = global.i_log = (a)=>console.log(`\n\n${(a)?a.toUpperCase():''}:\n`);
+    global.ilog = global.i_log = global._I_LOg = (a)=>console.log(`\n\n${(a)?a.toUpperCase():''}:\n`);
  
 /**
     EO - FUNCTIONAL IMPORTS

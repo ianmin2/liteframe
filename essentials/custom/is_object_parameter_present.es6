@@ -34,6 +34,6 @@ const isPresent = ( object, paramsArray ) => {
 
 }
 
-let is_present = isPresent; 
+let is_present = _IS_PRESENT = isPresent; 
 
-module.exports = {isPresent,is_present};
+module.exports = {isPresent,is_present,_IS_PRESENT};

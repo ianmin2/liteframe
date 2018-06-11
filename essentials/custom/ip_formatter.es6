@@ -18,10 +18,16 @@ var SocketIP = handshake => {
 };
 
 //RETURN THE CURRENT MACHINE'S IP ADDRESS
-exports.myAddr = exports.my_address = server_addr;
+exports.myAddr = exports.my_address
+= exports._MY_ADDR = exports._MY_ADDRESS
+= server_addr;
 
 //PROPERLY FORMAT AN IP ADDRESS
-exports.ipvify = exports.to_ip = ip => Ipvify(ip);
+exports.ipvify = exports.to_ip
+exports._IPVIFY = exports._TO_IP
+= ip => Ipvify(ip);
 
 //PICK THE IP ADDRESS OFF A SOCKET HANDSHAKE
-exports.socketIp = exports.socket_ip = handshake  => new Ipvify( new SocketIP( handshake ).ip ).ip;
+exports.socketIp = exports.socket_ip 
+exports._SOCKET_IP
+= handshake  => new Ipvify( new SocketIP( handshake ).ip ).ip;

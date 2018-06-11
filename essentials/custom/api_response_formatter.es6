@@ -10,6 +10,9 @@ const MakeResponse  = function( status, message, command  ){
     
 
 
-exports.makeResponse = exports.make_response = ( status, message, command ) => {
+exports.makeResponse 
+= exports.make_response
+= exports._MAKE_RESPONSE 
+= ( status, message, command ) => {
 	return new MakeResponse(status, message, command);
 };

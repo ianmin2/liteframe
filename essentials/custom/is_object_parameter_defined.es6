@@ -30,5 +30,7 @@ const isDefined =  function( object, paramsArray ){
 
 };
 
-exports.isDefined = exports.is_defined = isDefined;
+exports.isDefined = exports.is_defined 
+= exports._IS_DEFINED
+= isDefined;
 

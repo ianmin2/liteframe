@@ -1,16 +1,16 @@
 
 //**  MONTHS ARRAY
-exports.monthArray = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+exports.monthArray = exports._MONTH_ARRAY = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 //** VALIDATE WHETHER TWO GIVEN VALUES MATCH
-exports.matches = ( val1, val2 ) => ( val1 === val2 );
+exports.matches = exports._MATCHES = ( val1, val2 ) => ( val1 === val2 );
     
 //** TRANFORM NUMBER TO MONTH
-exports.num2month = ( month_number ) => ( !isNaN(month_number) && (month_number <= monthArray.length) ) ? exports.monthArray[month_number] : "Invalid Month" ;
-exports.getMonthName     = exports.num2month;
+exports.num2month = exports._NUM2MONTH = ( month_number ) => ( !isNaN(month_number) && (month_number <= exports._MONTH_ARRAY.length) ) ? exports._MONTH_ARRAY[month_number] : "Invalid Month" ;
+exports.getMonthName  = exports._GET_MONTH_NAME   = exports.num2month;
     
 //** REMOVE DUPLICATES FROM ARRAY
-exports.isUnique =  (array_ ) => {
+exports.isUnique = exports._IS_UNIQUE =  (array_ ) => {
 
     var ret_array = new Array();
 
@@ -37,24 +37,30 @@ exports.isUnique =  (array_ ) => {
 };
     
 //** COUNT OCCURANCES IN AN ARRAY
-exports.count = ( val, obj ) => {
-
-    var cnt = 0;
-
-    for( v in obj ){
-        if( val === obj[v] ){
-            cnt +=1;
-        }
-    }
-    return cnt;
-
-};
+exports.count =  exports._COUNT = ( val, obj ) => 
+    obj.reduce( (cumulative,currVal) => {
+        return ( currVal == val ) ? cumulative+=1 : cumulative;
+    },0);
 
 //** CONDITIONALLY TRANSFORM TO STRING
-exports.str = ( obj ) => ( typeof(obj) === "object" ) ? JSON.stringify(obj) : obj ;
+exports.str = exports._STR = ( obj ) =>{
+    try {
+        return ( typeof(obj) === "object" ) ? JSON.stringify(obj) : obj ;
+    } catch (error) {
+        return obj;
+    }
+} 
 
 //** CONDITIONALLY TRANSFORM TO JSON
-exports.json = ( obj ) => ( typeof(obj) === 'object' ) ? obj : JSON.parse( obj );
+exports.json = exports._JSON = ( obj ) => { 
+    try {  
+            return ( typeof(obj) === 'object' ) ? obj : JSON.parse( obj ) 
+        } 
+        catch(e)
+        { 
+            return obj; 
+        } 
+    }
 
 //** CLONE AN OBJECT
-exports.clone = (obj) => JSON.parse( JSON.stringify( obj ) );
+exports.clone = exports._CLONE = (obj) => JSON.parse( JSON.stringify( obj ) );

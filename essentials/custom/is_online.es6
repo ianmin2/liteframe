@@ -18,6 +18,6 @@ const isOnline = (cb) => {
     
 };
 
-let is_online = isOnline;
+let is_online = _IS_ONLINE = isOnline;
 
-module.exports = {isOnline,is_online};
+module.exports = {isOnline,is_online,_IS_ONLINE};

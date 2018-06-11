@@ -3,7 +3,7 @@ let d = `\n\t\t     @lightframe\n\t\t___________________\n\n\t\t  Version  ${v}\
 console.log(d);
 
 
-global.frame | {}; 
+// global.frame | {}; 
 
 //@ Make the application essentials available
 Object.assign( global, require( require("path").join( __dirname, `essentials/essentials.es6`) )  );

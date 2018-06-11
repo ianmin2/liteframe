@@ -1,6 +1,6 @@
 const Log = function( log_path, dev ){
 	
-	log_path = path.join( `${process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE}`,`/.bixbyte/logs/main.log`  ) ;
+	log_path = log_path ||  path.join( `${process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE}`,`/.bixbyte/logs/main.log`  ) ;
 	dev 	 = dev || true;
 
 	//@ Ensure that the loging directory exists
@@ -20,4 +20,4 @@ const Log = function( log_path, dev ){
 
 };
 
-exports.logger = ( log_path, dev ) => new Log( log_path, dev ).log;
+exports.logger = exports._LOGGER = ( log_path, dev ) => new Log( log_path, dev ).log;

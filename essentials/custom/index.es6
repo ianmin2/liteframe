@@ -1,14 +1,19 @@
 /** 
  *  AGE CALCULATOR
  **/   
-exports.getMyAge = exports.getAge = ( birthDate ) => {     
+exports.getMyAge = exports.getAge 
+= exports._GET_MY_AGE = exports._GET_AGE 
+= ( birthDate ) => {     
     return ( Math.abs( new Date( Date.now() - new Date( birthDate ).getTime() ).getUTCFullYear() - 1970 ) );
 };
 
 /**
 * PROPERLY FORMAT JSON ( made especially FROM jQuery.ajax REQUESTS )
 */
-exports.keyFormat = (dta = {} ,exemptions = []) => {
+exports.keyFormat 
+exports._KEY_FORMAT 
+= (dta = {} ,exemptions = []) => 
+{
     
     //@ Piece declaration
     var pieces;
@@ -42,7 +47,7 @@ exports.keyFormat = (dta = {} ,exemptions = []) => {
 /**
 * SPLIT ARRAY INTO CHUNKS OF 'x' UNITS
 */   
-exports.splitArray = function(arr = [],chunk_size=25){
+exports.splitArray  = exports._SPLIT_ARRAY = function(arr = [],chunk_size=25){
 
     if(Array.isArray(arr)){
 

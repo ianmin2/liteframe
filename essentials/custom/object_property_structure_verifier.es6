@@ -123,7 +123,9 @@ const objVerify = ( mainObject, verifyArray ) => {
 //!EO - 'objectVerify'
 
 //!EXPOSE THE APPLICATION VERIFICATION MODULE
-exports.objVerify = exports.object_verify = (mainObject, verificationArray) => {
+exports.objVerify = exports.object_verify 
+= exports._OBJECT_VERIFY
+= (mainObject, verificationArray) => {
     
     return new objVerify( mainObject, verificationArray );
     
