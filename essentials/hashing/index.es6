@@ -13,10 +13,10 @@ exports.crypt = {
 	,sha256 : 				(string) => crypto.createHash('sha256').update( string ).digest('hex')
 
 	//BASE64 ENCODE A STRING
-	,base64_encode : (			string) => new Buffer(string).toString('base64')
+	,base64_encode : (			string) => new Buffer.alloc(string).toString('base64')
 
 	//BASE64 DECODE A STRING
-	,base64_decode : 		(string) => new Buffer( new Buffer(string,'base64').toString('hex'), 'hex').toString('utf8')
+	,base64_decode : 		(string) => new Buffer.alloc( new Buffer.alloc(string,'base64').toString('hex'), 'hex').toString('utf8')
 
 	//GENERATE A CHECKSUM OF A BUFFER
 	,checksum : ( stream ) => {
