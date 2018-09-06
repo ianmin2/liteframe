@@ -1,6 +1,6 @@
 {
     "name": "lightframe",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "A powerful yet dead simple  framework for node.js.",
     "main": "frame.js",
     "scripts": {

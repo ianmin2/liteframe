@@ -137,3 +137,6 @@ v.1.0.3
 			=> Added querystring and request as dependencies
 v.1.3.0
 			> prefixed the non-module global variables in preparation for standardization at v2 release
+v.1.5.0     
+			=> Deprecated Buffer issue fixe
+			=> Unknown method `keyFormat` fix
