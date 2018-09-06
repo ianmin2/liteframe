@@ -11,7 +11,7 @@ exports.getMyAge = exports.getAge
 * PROPERLY FORMAT JSON ( made especially FROM jQuery.ajax REQUESTS )
 */
 exports.keyFormat 
-exports._KEY_FORMAT 
+= exports._KEY_FORMAT 
 = (dta = {} ,exemptions = []) => 
 {
     
