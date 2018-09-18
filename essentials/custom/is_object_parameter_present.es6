@@ -1,35 +1,32 @@
 const isPresent = ( object, paramsArray ) => {
-        
-	let retval = true;
+       
+    let process = () => {
 
-	let process = function( ){
-		
-	    let keys = Object.keys(object)
-	
-	    paramsArray.forEach(function(param) {
-		if( keys.indexOf(param) == -1 ){
-			retval = false; 
-		}
-	    }, this);
-	    
-	    return retval;
-	    
-	}
+        const keys = Object.keys(object);
 
-	if( !Array.isArray(paramsArray) ){
+        return ( paramsArray.filter(p_val => keys.indexOf(p_val)!= -1).length ) ? true : false ;
+
+    };
+
+
+    if( !Array.isArray(paramsArray) )
+    {
 
 	    paramsArray = (typeof(paramsArray) == "string") ?  paramsArray.split(",") : undefined;
 
-	    if ( !paramsArray ){
-		return false;
-	    }else{
-		return process();
+        if ( !paramsArray )
+        {
+		    return false;
+        }
+        else
+        {
+		    return process();
 	    }
 
-	}else{          
-
+    }
+    else
+    {  
 	    return process();
-
 	}
 
 }
