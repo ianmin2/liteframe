@@ -23,6 +23,8 @@
     exports.zip                 = require("adm-zip");
     exports.targz               = require("tar.gz"); 
     exports.compression         = require("compression");
+    // exports.oppressor           = require("oppressor");
+    exports.busboy              = require("connect-busboy");
     exports.request             = require("request");
     exports.qs                  = require("querystring");
     exports.request_promise     = require("request-promise");
@@ -59,7 +61,12 @@
 
     //** AUTHENTICATION MODULES
     exports.passport         = require("passport");
-    exports.passport_jwt     = require("passport-jwt");
+    let passport_jwt         = require("passport-jwt");
+    passport_jwt.ExtractJwt.fromAuthHeader   = () =>
+    {
+        return passport_jwt.ExtractJwt.fromHeader("authorization");
+    }
+    exports.passport_jwt     = passport_jwt; 
     exports.nJwt             = require("njwt");
     exports.jwt              = require("jsonwebtoken");
    
