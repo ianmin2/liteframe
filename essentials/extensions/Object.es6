@@ -26,3 +26,11 @@ var foreach = function( cb ){
 };
 Object.defineProperty(Object.prototype, 'foreach', { value: foreach, enumerable: false });
 Object.defineProperty(Object.prototype, 'for_each', { value: foreach, enumerable: false });
+
+Object.filter = (obj,predicate) => 
+    Object.keys(obj)
+          .filter( key => predicate(obj[key]) )
+          .reduce( (res, key) => Object.assign(res, { [key]: obj[key] }), {} );
+        //   .reduce( (res, key) => (res[key] = obj[key], res), {} );
+
+// Object.defineProperty(Object.prototype, 'filter', {value:filter, enumerable:false} );
