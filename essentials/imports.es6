@@ -56,7 +56,7 @@
     exports.multer              = require("multer");
     exports.socket	            = require("socket.io");
     exports.ejs                 = require("ejs");
-    exports.useragent           = require("superagent");
+    // exports.useragent           = require("superagent");
     exports.wagner              = require("wagner-core");
 
     //** AUTHENTICATION MODULES
