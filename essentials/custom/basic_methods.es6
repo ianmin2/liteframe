@@ -10,29 +10,38 @@ exports.num2month = exports._NUM2MONTH = ( month_number ) => ( !isNaN(month_numb
 exports.getMonthName  = exports._GET_MONTH_NAME   = exports.num2month;
     
 //** REMOVE DUPLICATES FROM ARRAY
-exports.isUnique = exports._IS_UNIQUE =  (array_ ) => {
+exports.isUnique = exports._IS_UNIQUE =  (array_ ) => 
+{
 
-    var ret_array = new Array();
+    if(Array.isArray(array_))
+    {
+        var ret_array = new Array();
 
-    for (var a = array_.length - 1; a >= 0; a--) {
+        for (var a = array_.length - 1; a >= 0; a--) {
 
-        for (var b = array_.length - 1; b >= 0; b--) {
+            for (var b = array_.length - 1; b >= 0; b--) {
 
-            if(array_[a] == array_[b] && a != b){
+                if(array_[a] == array_[b] && a != b){
 
-                delete array_[b];
+                    delete array_[b];
 
-            }
+                }
 
-        };
+            };
 
-        if(array_[a] != undefined)
+            if(array_[a] != undefined)
 
             ret_array.push(array_[a]);
 
-    };
+        };
 
-    return ret_array.reverse();
+        return ret_array.reverse();
+
+    }
+    else
+    {
+        return ["not an array"];
+    }
 
 };
     
@@ -43,7 +52,8 @@ exports.count =  exports._COUNT = ( val, obj ) =>
     },0);
 
 //** CONDITIONALLY TRANSFORM TO STRING
-exports.str = exports._STR = ( obj ) =>{
+exports.str = exports._STR = ( obj ) =>
+{
     try {
         return ( typeof(obj) === "object" ) ? JSON.stringify(obj) : obj ;
     } catch (error) {
@@ -52,7 +62,8 @@ exports.str = exports._STR = ( obj ) =>{
 } 
 
 //** CONDITIONALLY TRANSFORM TO JSON
-exports.json = exports._JSON = ( obj ) => { 
+exports.json = exports._JSON = ( obj ) => 
+{ 
     try {  
             return ( typeof(obj) === 'object' ) ? obj : JSON.parse( obj ) 
         } 

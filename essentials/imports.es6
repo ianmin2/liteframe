@@ -18,13 +18,13 @@
     exports.c                   = require("colors");
     exports.fse                 = require("fs-extra");
     
-    exports.gcm		        	= require("node-gcm");
+    exports.fcm		        	= require("node-gcm");
     
     exports.zip                 = require("adm-zip");
     exports.targz               = require("tar.gz"); 
     exports.compression         = require("compression");
     // exports.oppressor           = require("oppressor");
-    exports.busboy              = require("connect-busboy");
+    // exports.busboy              = require("connect-busboy");
     exports.request             = require("request");
     exports.qs                  = require("querystring");
     exports.request_promise     = require("request-promise");
