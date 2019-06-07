@@ -5,6 +5,24 @@ exports.isEmail  = exports.is_email = ( prospective_email ) => mailRegex.test( p
     
 //*VALIDATE TELEPHONE NUMBERS
 exports.isTelephone = exports.is_telephone = ( prospective_telephone ) => telRegex.test(prospective_telephone);
+
+exports.toTelephone = exports.to_telephone = ( prospective_telephone, phone_prefix = "254" ) => {
+
+    let phone = prospective_telephone.replace(/\s|\(|\)|\-/ig,'');
+    let rgx = new RegExp(`^${phone_prefix}`,'i');
+
+    return (phone.length <= 10 )
+        ? (phone.charAt(0) == 0)
+            ? `${prefix}${phone.replace(/^0/i, '')}`
+            : `${prefix}${phone}`
+        : (phone.charAt(0)(`+`) == true)
+            ? `${phone.replace(/\+/ig, '')}`
+            : ( rgx.test(phone) == true )
+        ? phone
+        : `${prefix}${phone}`;
+  
+}
+
     
 //** VALIDATE USERNAMES
 exports.isUsername= exports.is_username = ( prospective_username ) => userRegex.test( prospective_username );
