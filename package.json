@@ -32,7 +32,7 @@
         "sequelize": "^4.43.0",
         "shelljs": "^0.8.3",
         "socket.io": "^2.2.0",
-        "tar.gz": "^1.0.7",
+        "tar": "^4.4.10",
         "wagner-core": "^0.2.0"
     },
     "repository": {
