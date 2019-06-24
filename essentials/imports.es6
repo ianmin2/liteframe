@@ -21,7 +21,7 @@
     exports.fcm		        	= require("node-gcm");
     
     exports.zip                 = require("adm-zip");
-    exports.targz               = require("tar.gz"); 
+    exports.targz               = require("tar"); 
     exports.compression         = require("compression");
     // exports.oppressor           = require("oppressor");
     // exports.busboy              = require("connect-busboy");
