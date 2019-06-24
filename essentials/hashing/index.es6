@@ -39,6 +39,20 @@ exports.crypt = {
 
 		});
 		
+	},
+
+	key_encrypt : function(to_encrypt, ABSOLUTE_path_to_public_key) {
+		const publicKey 	= fs.readFileSync(ABSOLUTE_path_to_public_key, "utf8");
+		const buffer 	    = Buffer.from(to_encrypt);
+		let encrypted       = crypto.publicEncrypt(publicKey, buffer);
+		return encrypted.toString("base64");
+	},
+
+	key_decrypt : function(toDecrypt, ABSOLUTE_path_to_private_key) {
+		const privateKey 	= fs.readFileSync(ABSOLUTE_path_to_private_key, "utf8");
+		const buffer 	    = Buffer.from(toDecrypt, "base64");
+		let  decrypted 		= crypto.privateDecrypt(privateKey, buffer);
+		return decrypted.toString("utf8");
 	}
 
 };

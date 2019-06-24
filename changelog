@@ -148,3 +148,5 @@ v.1.6.1
 ==> LITEFRAME 
 
 v.0.3.0     => Added untested Object.filter
+
+v.0.8.0 	=> Added untested crypto.key_encrypt(content,abs_path_to_pub_key) and crypto.key_decrypt(content,abs_path_to_priv_key) methods 
