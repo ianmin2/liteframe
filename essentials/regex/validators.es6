@@ -19,7 +19,7 @@ exports.toTelephone = exports.to_telephone = ( prospective_telephone, phone_pref
             ? `${phone.replace(/\+/ig, '')}`
             : ( rgx.test(phone) == true )
         ? phone
-        : `${prefix}${phone}`;
+        : `${prefix}${phone.replace(/^0/,'')}`;
   
 }
 
