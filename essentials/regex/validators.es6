@@ -13,13 +13,13 @@ exports.toTelephone = exports.to_telephone = ( prospective_telephone, phone_pref
 
     return (phone.length <= 10 )
         ? (phone.charAt(0) == 0)
-            ? `${prefix}${phone.replace(/^0/i, '')}`
-            : `${prefix}${phone}`
-        : (phone.charAt(0)(`+`) == true)
+            ? `${phone_prefix}${phone.replace(/^0/i, '')}`
+            : `${phone_prefix}${phone}`
+        : (phone.charAt(0) == `+`)
             ? `${phone.replace(/\+/ig, '')}`
             : ( rgx.test(phone) == true )
         ? phone
-        : `${prefix}${phone.replace(/^0/,'')}`;
+        : `${phone_prefix}${phone.replace(/^0/,'')}`;
   
 }
 
