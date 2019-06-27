@@ -27,7 +27,7 @@
     // exports.busboy              = require("connect-busboy");
     exports.request             = require("request");
     exports.qs                  = require("querystring");
-    exports.request_promise     = require("request-promise");
+    exports.request_promise     = require("axios");
 
     // exports.xml2json            = require("simple-xml2json");
 
