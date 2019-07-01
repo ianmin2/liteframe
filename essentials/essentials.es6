@@ -10,13 +10,12 @@
 
     //@ The regular expressions setter
     Object.assign(global,require(path.join(__dirname,"regex/index.es6")));
+  
+    //@ Require some useful custom methods
+    Object.assign(global,require(path.join(__dirname,"custom/index.es6")));
 
     //@ Basic Hashing
     Object.assign(global,require(path.join(__dirname,"hashing/index.es6")));
-    
-
-    //@ Require some useful custom methods
-    Object.assign(global,require(path.join(__dirname,"custom/index.es6")));
 
     global.log = global._LOG   = logger(  path.join( global.home, ".bixbyte/logs/main.log") );
 
