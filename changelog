@@ -156,3 +156,5 @@ v.0.10.0	=> Upgraded sequelize version to 5.3.0 (May Introduce unforseen breaks)
 v.0.13.0 	=> request_promise global variable References 'axios' module
 
 v.0.14.0 	=> request-promise module back by popular demand
+
+v.0.15.0 	=> Dependency re-arranging, addition of rsa_encrypt & rsa_decrypt methods and update of hashing methods to use the global _STR over the str (which is easy to overwrite)

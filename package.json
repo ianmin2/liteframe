@@ -1,6 +1,6 @@
 {
     "name": "liteframe",
-    "version": "0.13.0",
+    "version": "0.15.0",
     "description": "A powerful yet dead simple  framework for node.js.",
     "main": "frame.js",
     "scripts": {
