@@ -87,7 +87,6 @@ Array.prototype.unique = function() {
     });
     
 };
-Array.prototype.fast_unique = Array.prototype.unique;
     
 //@ REMOVE A VALUE FROM AN ARRAY
 Array.prototype.clean = function(deleteValue=[undefined,null,'']) {
